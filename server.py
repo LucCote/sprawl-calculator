@@ -1,11 +1,16 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, render_template
 import sprawlcalculator as sc
 from io import BytesIO
 
 app = Flask(__name__)  # Initialize Flask
 
-# default call to server, returns json object containing city name, country, population, latitude, longitude, and sprawl score
-@app.route('/', methods=['GET'])
+# default call to server, serves homepage
+@app.route('/')
+def root():
+    return render_template("index.html")
+
+#  call to server/info, returns json object containing city name, country, population, latitude, longitude, and sprawl score
+@app.route('/info', methods=['GET'])
 def default():
     city = request.args.get('city')
     result = sc.get_city_info(city)
