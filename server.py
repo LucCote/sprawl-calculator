@@ -7,6 +7,7 @@ app = Flask(__name__)  # Initialize Flask
 # default call to server, returns json object containing city name, country, population, latitude, longitude, and sprawl score
 @app.route('/', methods=['GET'])
 def default():
+    print("hello\n")
     city = request.args.get('city')
     result = sc.get_city_info(city)
     data = {}
