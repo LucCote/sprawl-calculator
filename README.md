@@ -24,7 +24,7 @@ calling the API:
 - the flask server portion of this project is currently running on [heroku](https://sprawl-calculator.herokuapp.com/) and takes calls through the form of html get requests
 - [heroku/info](https://sprawl-calculator.herokuapp.com/info)
     - call: requires a get request with field city set to the name of the city which you would like info on
-    - response: response: jpeg file of image of city with pixels of interest highlighted (roads and mid-high density housing)
+    - response: jpeg file of image of city with pixels of interest highlighted (roads and mid-high density housing)
 - [heroku/image](https://sprawl-calculator.herokuapp.com/image)
     - call: requires a get request with field city set to the name of the city which you would like an image of
     - response: jpeg file of image of city with pixels of interest highlighted
