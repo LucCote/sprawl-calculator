@@ -10,7 +10,7 @@ The sprawl-calculator uses the equation: `(Area/Population)*ScaleFactor`
 ### Implementation
 Finding Area
 - The area of a given city is determined by counting the number of pixels of interest in a 400px by 400px image of the city
-- To retrieve this image call is made to the Mapbox api, giving it the location of the center of the city. TheMapbox API then responds with a 400px by 400px image of the city with a custom map skin designed to enhance the differences between mid-high density residential building and roads, and natural features
+- To retrieve this image a call is made to the Mapbox api, giving it the location of the center of the city. TheMapbox API then responds with a 400px by 400px image of the city with a custom map skin designed to enhance the differences between mid-high density residential building and roads, and natural features
 - The sprawl-calculator then loops over the retrieved image and counts the number of pixels over a certain brightness threshold as these are likely to be structures which are part of the city (due to the custom Mapbox skin), these are the pixels of interest
 
 Finding Population
