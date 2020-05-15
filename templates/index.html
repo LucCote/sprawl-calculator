@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Sprawl Calculator API</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <h1>Sprawl Calculator API</h1>
-        <p>The sprawl calculator api is called through the form of html get requests</p>
-        <h2>Calls</h2>
+    <h1>Sprawl Calculator API</h1>
+    <p>An API for retrieving city metrics called through the form of html get requests</p>
+    <div id="calls">
+        <h1 style="text-align: center">Calls</h1>
         <h3>/info</h3>
         <ul>
             <li>call: requires a get request with field city set to the name of the city which you would like info on</li>
@@ -20,20 +21,29 @@
             <li>response: jpeg file of image of city with pixels of interest highlighted (roads and mid-high density housing)</li>
         </ul>
     </div>
-    <div>
+    <br>
+    <div id="tests">
         <h1>Try it out</h1>
-        <h2>Get Info: </h2>
-        <form action="/info">
-            <label for="city">Enter a city:</label><br>
-            <input type="text" id="city" name="city" value="boston"><br>
-            <input type="submit" value="Submit">
-        </form>
-        <h2>Get Image</h2>
-        <form action="/image">
-            <label for="city">Enter a city:</label><br>
-            <input type="text" id="city" name="city" value="boston"><br>
-            <input type="submit" value="Submit">
-        </form>
+        <div class="formdiv">
+            <h2>Get Info: </h2>
+            <form action="/info">
+                <label for="city">Enter a city:</label><br>
+                <input type="text" id="city" name="city" value="boston"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <br>
+        <div class="formdiv">
+            <h2>Get Image:</h2>
+            <form action="/image">
+                <label for="city">Enter a city:</label><br>
+                <input type="text" id="city" name="city" value="boston"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="bottom">
+        <b>Made with <3 by Luc Coté</b>
     </div>
 </body>
 </html>
