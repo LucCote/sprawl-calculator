@@ -1,5 +1,5 @@
 # sprawl-calculator
-An API which takes city names and uses information from Mapbox and Geoname APIs in order to calculate a score for how sprawled said city is
+An API which takes a city name and uses information from Mapbox and Geoname APIs in order to calculate a score for how sprawled said city is
 
 ### Calculation
 The sprawl-calculator uses the equation: `(Area/Population)*ScaleFactor`
